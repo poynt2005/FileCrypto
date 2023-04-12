@@ -1,0 +1,21 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "path.js",
+  "scripts": {
+    "test-gen": "node test.js generate",
+    "test-enc": "node test.js encrypt",
+    "test-dec": "node test.js decrypt",
+    "build-dll": "cd ..\\ && mingw32-make dll && echo F | xcopy /Y FileEncryptorDecryptorAPI.dll node\\FileEncryptorDecryptorAPI.dll",
+    "build-native": "npm run build-dll && powershell -F .\\build.ps1",
+    "build-downloader": "cd FileDownloader && powershell -F .\\build.ps1 && echo F | xcopy /Y FileDownloader.node ..\\FileDownloader.node"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "gypfile": true,
+  "devDependencies": {
+    "node-addon-api": "^6.0.0"
+  }
+}

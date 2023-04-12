@@ -1,0 +1,10 @@
+*.dll
+*.exp
+*.obj
+*.o
+*.exe
+*.zip
+*.node
+*.key
+node_modules/
+cryptocpp/
